@@ -2,6 +2,9 @@
 import csv
 import os
 
+csvpath = csvpath = os.path.join("Resources", "pyban.csv")
+
+
 with open('./resources/pybank.csv', newline='') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
     months_processed = []
