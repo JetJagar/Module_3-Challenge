@@ -4,7 +4,6 @@ import os
 
 csvpath = csvpath = os.path.join("Resources", "pyban.csv")
 
-
 with open('./resources/pybank.csv', newline='') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
     months_processed = []
@@ -30,30 +29,20 @@ with open('./resources/pybank.csv', newline='') as csvfile:
         if previous_profit != 0:
             change = profit_num - previous_profit
             changes.append(change)
-            #print(change)
-             # for greatest increase and decrease
-             # [0] sets for automatic change 
+             
             if grt_p[0] < change:
                 grt_p[0] = change
                 grt_p[1] = row[0]
-                #print(row[0])
+                
             if grt_d[0] > change:
                 grt_d[0] = change 
                 grt_d[1] = row[0]
-                #print(row[0])
+                
         previous_profit = profit_num  
-        # print(row)
-        # print(row[0])
-        # print(row[1])
-    #for column in row:
-        #print(column.replace('\t', ' '))
-    # print(num_months)
+    # removing header count   
     num_months = num_months - 1
-    # print (total)
+    
     average_change = sum(changes) / len(changes)
-    # print(round(average_change, 2))
-    # print(grt_p)
-    # print(grt_d)
 
     #built to split and reverse the dfate column to return month then day
 def split_and_reverse(item:str):
