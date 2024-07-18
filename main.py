@@ -2,10 +2,10 @@
 import csv
 import os
 
-csvpath = csvpath = os.path.join("Resources", "pyban.csv")
+csvpath = os.path.join("Resources", "pybank.csv")
 
 with open('./resources/pybank.csv', newline='') as csvfile:
-    spamreader = csv.reader(csvfile, delimiter=',')
+    bankreader = csv.reader(csvfile, delimiter=',')
     months_processed = []
     num_months = 0 
     total = 0
@@ -13,7 +13,7 @@ with open('./resources/pybank.csv', newline='') as csvfile:
     changes = []
     grt_p = [0, ""]
     grt_d = [0, ""]
-    for row in spamreader:
+    for row in bankreader:
         # telling loop to ignore header row
         if num_months == 0:
             num_months = num_months + 1 
@@ -55,6 +55,20 @@ print("Total: ${}".format(total))
 print("Average Change: ${}".format(round(average_change, 2)))
 print("Greatest Increase in Profits: {} (${})".format(split_and_reverse(grt_p[1]), grt_p[0]))
 print("Greatest Decrease in Profits: {} (${})".format(split_and_reverse(grt_d[1]), grt_d[0]))
+
+
+# ------------------------------------------------------------------------------------------------------
+
+
+        
+          
+    
+        # tellin loop to ignore header row
+        
+    
+
+
+
 
 
     
