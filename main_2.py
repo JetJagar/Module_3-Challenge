@@ -3,9 +3,9 @@ import pandas as pd
 csvpath_2 = os.path.join("Resources", "election_data.csv")
 
 df = pd.read_csv("resources/election_data.csv")
-df.info()
+# df.info()
 total = len(df)
-print(df.keys())
+# print(df.keys())
 candidate_count_df = (df["Candidate"].value_counts(ascending = False))
 winner = True
 winner_name = ""
