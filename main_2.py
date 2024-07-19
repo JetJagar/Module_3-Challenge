@@ -7,35 +7,13 @@ df = pd.read_csv("resources/election_data.csv")
 total = len(df)
 # print(df.keys())
 candidate_count_df = (df["Candidate"].value_counts(ascending = False))
-winner = True
-winner_name = ""
-for candidate in candidate_count_df.items():
-    if winner: 
-        winner_name  = candidate[0]
-        winner = False    
-    print(candidate[0])
-    print(candidate[1])
-    print(round(candidate[1]/total * 100, 2))
-print(winner_name)
-
-
-
-
-
-
-# with open('./resources/election_data.csv', newline='') as csvfile_2:
-#     electionreader = pd.read_csv(csvfile_2, delimiter= ',')
-#     total_votes = 0
-#     vote_count = []
-    
-#     for row in electionreader:
-#         # loops through all rows to add up votes
-#         if total_votes == 0:
-#             total_votes = total_votes + 1
-#             continue
-        
-#         # removes duplicate rows if necessary    
-#         if row[0] not in vote_count:
-#             total_votes = total_votes + 1 
-#             vote_count.append(row[0]) 
-#     print(total_votes)
+print("Election Results")
+print("-------------------------")
+print("Total Votes: {} ".format(total))
+print("-------------------------")
+for candidate in sorted(candidate_count_df.items()):
+    print("{}: {}% ({})".format(candidate[0], round(candidate[1]/total * 100, 2),candidate[1]))
+print("-------------------------")
+# next returns only the first item in a list
+print("Winner: {}".format((next(candidate_count_df.items()) [0])))
+print("-------------------------")
