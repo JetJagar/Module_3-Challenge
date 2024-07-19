@@ -1,9 +1,5 @@
 # Module_3 Challenge
 This is the repo for my Module_3 challenge
-
-
-
-For the py.poll part of this challenge I needed to run the analysis through pandas module because the elections results csv was too large and would take too long to loop through all the data.
 --------------------------------------------------------
 PyBank Instructions
 --------------------------------------------------------
@@ -20,8 +16,9 @@ The changes in "Profit/Losses" over the entire period, and then the average of t
 The greatest increase in profits (date and amount) over the entire period
 
 The greatest decrease in profits (date and amount) over the entire period
-
+-------------------------------------------------------------
 PyPoll Instructions
+(For the py.poll part of this challenge I needed to run the analysis through pandas module because the elections results csv was too large and would take too long to loop through all the data.)
 ------------------------------------------------------------
 
 In this Challenge, you are tasked with helping a small, rural town modernize its vote-counting process.
